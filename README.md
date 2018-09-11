@@ -1,4 +1,3 @@
-# newProject
-Express Static Server
+# Express Static Server
 
-connecting to mongoDB database
+Connecting to mongoDB database
