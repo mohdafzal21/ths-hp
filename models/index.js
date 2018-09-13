@@ -1,4 +1,4 @@
-const mongoose =require('mangoose');
+const mongoose =require('mongoose');
 mongoose.connect('mongoose://localhost/',(err)=>{
     if(err){
         console.log(err);
