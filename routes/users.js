@@ -12,6 +12,7 @@ router.get('/challenges',(req,res)=>{
   res.render('index');
 })
 
+
 //for passport session midddleware
 router.use(passport.initialize());
 

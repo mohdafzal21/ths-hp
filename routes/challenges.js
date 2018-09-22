@@ -5,8 +5,10 @@ const db = require('../models');
 
 //test route
 router.get('/home',(req,res)=>{
-    res.send("all challenges are here")
+    res.render('challenges');
 });
+
+
 
 
 //get all challenges

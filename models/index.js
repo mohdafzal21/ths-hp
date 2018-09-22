@@ -1,5 +1,14 @@
 const mongoose =require('mongoose');
-mongoose.connect('mongodb://localhost/thshp',(err)=>{ //enter ur api name
+
+// mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds225382.mlab.com:25382/ths_oc');
+
+//Set up default mongoose connection
+// const mongoDB = 'mongodb://mohdafzal21:abcXYZ123@ds225382.mlab.com:25382/ths_oc'
+
+// mongoose.connect(mongoDB);
+
+//for local machine mongo server
+mongoose.connect('mongodb://localhost/thshp',(err)=>{ 
     if(err){
         console.log(err);
     }else {

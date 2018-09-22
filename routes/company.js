@@ -3,8 +3,8 @@ const router = express.Router();
 const db = require('../models');
 
 //test route
-router.get('/c',(req,res)=>{
-    res.send("hello test rout")
+router.get('/home',(req,res)=>{
+    res.render('company');
 });
 
 //get all Companies
