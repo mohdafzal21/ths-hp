@@ -1,5 +1,5 @@
 const mongoose =require('mongoose');
-mongoose.connect('mongodb://localhost/',(err)=>{ //enter ur api name
+mongoose.connect('mongodb://localhost/thshp',(err)=>{ //enter ur api name
     if(err){
         console.log(err);
     }else {
