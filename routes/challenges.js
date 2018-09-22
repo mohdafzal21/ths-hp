@@ -4,9 +4,10 @@ const router = express.Router();
 const db = require('../models');
 
 //test route
-router.get('/test',(req,res)=>{
-    res.send("hello this is connected to challenges route")
+router.get('/home',(req,res)=>{
+    res.send("all challenges are here")
 });
+
 
 //get all challenges
 router.get('/',(req,res)=>{

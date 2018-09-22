@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var passport              = require("passport")
+var LocalStrategy         = require("passport-local")
+var passportLocalMongoose = require("passport-local-mongoose")
+//controllers
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var challengesRouter = require('./routes/challenges');
@@ -13,6 +17,27 @@ var challengesRouter = require('./routes/challenges')
 var companyRouter = require('./routes/company')
 
 var app = express();
+
+//passport configure
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(require("express-session")({
+    secret: "ast u",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+// requires the model with Passport-Local Mongoose plugged in
+const db = require('./models');
+ 
+// use static authenticate method of model in LocalStrategy
+passport.use(new LocalStrategy(db.User.authenticate()));
+ 
+// use static serialize and deserialize of model for passport session support
+passport.serializeUser(db.User.serializeUser());
+passport.deserializeUser(db.User.deserializeUser());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

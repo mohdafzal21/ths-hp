@@ -5,10 +5,17 @@ const db = require('../models');
 router.get('/pro',(req,res)=>{
     res.send("hello this is connected to profile route");
 });
-
+//get all user profiles 
 router.get('/', (req,res)=>{
     db.Profile.find()
-    .then((profile)=>res.json(profile))
+    .populate('users',['username'])
+    .then(profile => {
+        if(!profile){
+            errors.noprofiles = " there are no profiles with this user name";
+            return res.status(404).json(errors);
+        }
+        return res.json(profile);
+    })
     .catch((err)=>res.send(err))
 });
 
