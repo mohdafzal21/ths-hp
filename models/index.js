@@ -9,5 +9,6 @@ mongoose.connect('mongodb://localhost/',(err)=>{ //enter ur api name
 
 module.exports.User = require('./users');
 module.exports.Profile = require('./profile');
+module.exports.Challenge = require('./challenges');
 
 mongoose.Promise = Promise;
