@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
 const companySchema = new mongoose.Schema({
-
+    jobImage: {
+        type: String
+    },
     jobName: {
         type: String
     },
@@ -11,10 +13,7 @@ const companySchema = new mongoose.Schema({
     jobLocation: {
         type: String
     },
-    jobImage: {
-        type: String
-    },
-
+   
 });
 
 const Company = mongoose.model("Company", companySchema);

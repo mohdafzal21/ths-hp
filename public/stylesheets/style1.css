@@ -1,5 +1,6 @@
 
 
+
 a {
     color: white;
   }
@@ -9,6 +10,13 @@ a {
   .navbar-light{
       background-color: aliceblue;
   }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-left: 10px;
+}
 
   /* login css */
 

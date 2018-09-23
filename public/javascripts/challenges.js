@@ -15,6 +15,9 @@ $.getJSON('/api/challenges/',function(data){
 challenges.init = function(){
     challenges.generateMarkup();
 };
+// on click
+
+
 
 //build html markup
 challenges.generateMarkup = function(){
@@ -30,7 +33,7 @@ challenges.generateMarkup = function(){
         template += '<img class="card-img-top" src="'+id.companyImage+'"></img>';
         template += '<div class="card-body">';
         template += '<h3 class="card-title">'+id.companyName+'</h3>';
-        template += '<h  class="card-text">'+id.position+'</p>';
+        template += '<p  class="card-text">'+id.position+'</p>';
         template += '<h5 class="fas fa-map-marker-alt">'+id.jobAddress+'</h5><br>'; 
         template += '<a href="#" class="btn btn-primary">Start</a>'; 
         template += '</div>';
