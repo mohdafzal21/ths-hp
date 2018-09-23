@@ -21,7 +21,7 @@ router.post('/',(req,res)=>{
     .catch((err)=>res.send(err));
 });
 
-//show page for a particular comapny
+//show page for a particular company
 router.get('/:id',(req,res)=>{
     let id = req.params.id;
     db.Company.findById(id)
