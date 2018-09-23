@@ -14,7 +14,7 @@ router.get('/',(req,res)=>{
 // all companies page
 router.post('/',(req,res)=>{
     db.Company.create(req.body)
-    .then((company)=> res.json(company))
+    .then(res.redirect('/company'))
     .catch((err)=>res.send(err));
 });
 

@@ -4,6 +4,7 @@ const router = express.Router();
 const db = require('../models');
 
 
+  
 //get all challenges
 router.get('/',(req,res)=>{
     db.Challenges.find()
@@ -14,7 +15,7 @@ router.get('/',(req,res)=>{
 //create a new challenge
 router.post('/',(req,res)=>{
     db.Challenges.create(req.body)
-    .then((challenges)=> res.json(challenges))
+    .then(res.redirect('/challenges'))
     .catch((err)=>res.send(err));
 });
 
@@ -33,7 +34,7 @@ router.put('/:id',(req,res)=>{
     .catch((err)=>res.send(err));
 });
 
-//delete a particular challenge
+//delete a particular challenge - /api/challenges/14891247089172089348107320
 router.delete('/:id',(req,res)=>{
     db.Challenges.remove({_id:req.params.id})
     .then(res.send("challenge is removed"))

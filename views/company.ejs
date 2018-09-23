@@ -1,8 +1,24 @@
 
 <% include ./partials/header.ejs %>
 
+<form id="addr2"  method="POST">
+    <label>Update Form</label><br>
+      <label>jobName</label><input type="text" name="jobName" id ="id1">
+      <label>jobWebsite</label><input type="text" name="jobWebsite" id ="id2" >
+      <label>JobLocation</label><input type="text" name="jobLocation" id ="id3" >
+      
+      <button type="submit" >submit</button>
+      </form>
+    
 
-<div class="content"> </div>
+<div class="content"></div>
+
+
+<script>
+    $('#addr2').hide();
+    
+  
+  </script>
 
 
 <script defer src="/public/javascripts/company.js"></script>
