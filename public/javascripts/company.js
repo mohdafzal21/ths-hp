@@ -34,7 +34,7 @@ company.generateMarkup = function(){
         template += '<div class="Ln">';
         template += '<h5>"'+id.jobLocation+'"</h5>';
         template += '</div>';
-        template += '<div class="left">';
+        template += '<div class="img    ">';
         template += '<img src= "'+ id.jobImage +'">';
         template += '</div>';
 
