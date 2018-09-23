@@ -77,8 +77,9 @@ a {
  body, html{
   height: 100%;
 background-repeat: no-repeat;
+font-family: 'Roboto', sans-serif;
 background-color: #d3d3d3;
-font-family: 'Oxygen', sans-serif;
+
 }
 
 .main{
@@ -87,7 +88,7 @@ margin-top: 70px;
 
 h1.title { 
 font-size: 50px;
-font-family: 'Passion One', cursive; 
+font-family: 'Roboto', sans-serif;
 font-weight: 400; 
 }
 
@@ -143,18 +144,9 @@ margin-top: 5px;
 font-size: 11px;
 text-align: center;
 }
-.content{
-  border-block-start-color: black
-}
-.left{
-box-width: 30;
-box-height:30;
 
-
-}
-
-.item {
-  margin-top: 30px;
-  float: left;
-  margin-left: 30px;
+.fa {
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 20px;
 }

@@ -3,7 +3,7 @@ challenges.database = []
 
  challenges.loadAssests = function(){
 
-$.getJSON('/challenges/',function(data){
+$.getJSON('/api/challenges/',function(data){
     
      challenges.database =data;
     challenges.init();

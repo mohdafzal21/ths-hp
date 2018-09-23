@@ -8,13 +8,8 @@ router.get('/test', function(req, res, next) {
   res.send('testing a user route');
 });
 
-
-
-
 //for passport session midddleware
 router.use(passport.initialize());
-
-
 
 //// auth routes
 // /users/signup
@@ -28,28 +23,20 @@ router.post('/signup',(req,res)=>{
      }else{
        passport.authenticate("local")(req,res,function(){
                 //  res.send("u have succesfully signed up");
-                 res.redirect('/challenges');
+                 res.redirect('/home');
        })
      };
 } )
 })
 
-
-
 // login auth route
 
 router.post('/login', passport.authenticate("local",{
-       successRedirect:'/challenges',
+       successRedirect:'/home',
        failureRedirect : '/login'
 }),(req,res)=>{});
 
 
-// router.get('/current',
-//   passport.authenticate('local'),
-//   (req, res) => {
-//     console.log(req);
-//   }
-// );
 
 
 //logout 
