@@ -16,48 +16,37 @@ const challengesSchema = new mongoose.Schema({
         },
         startTime: {
             type: String,
-            default: "00:00:00",
+            default: "00:00:00"
         },
         StartDate: {
             type: Date,
-            default: Date.now(),
+            default: Date.now()
         },
 
         endTime: {
             type: String,
-            default: "00:00:00",
+            default: "00:00:00"
 
         },
 
         endDate: {
             type: Date,
-            default: Date.now(),
+            default: Date.now()
 
         },
         companyImage:{
-            type : String,
+            type : String
 
         },
         competitionImage : {
-            type : String,
+            type : String
 
         },
         jobAddress :{
-            type : String,
+            type : String
         },
-        
-
-
-
-
-
-
-
-
-
     
-
-})
+    });
 const Challenge = mongoose.model("Challenge", challengesSchema);
 
 module.exports = Challenge;
