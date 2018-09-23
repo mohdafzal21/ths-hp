@@ -72,7 +72,7 @@
     $.each(company.database, function(index) {
       db = company.database;
       id = db[index];
-      console.log(id);
+    //   console.log(id);
   
       template += '<div class="card" style="width: 18rem;">';
       template +=
