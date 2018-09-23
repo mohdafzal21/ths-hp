@@ -3,10 +3,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-//test route
-router.get('/home',(req,res)=>{
-    res.render('challenges');
-});
+
 
 
 

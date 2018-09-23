@@ -1,0 +1,149 @@
+*{
+  margin: 0 0;
+  padding: 0 0;
+}
+
+
+a {
+    color: white;
+  }
+ .navbar-expand-lg{
+      background-color: black;
+  }
+  .navbar-light{
+      background-color: aliceblue;
+  }
+
+  /* login css */
+
+  body#background{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; }
+
+.form-heading { color:#fff; font-size:23px;}
+.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 0 auto;
+  max-width: 50%;
+  padding: 50px 70px 70px 71px;
+}
+
+.login-form .form-group {
+  margin-bottom:40px;
+}
+.login-form{ text-align:center;}
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+.botto-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+/* signup css  */
+
+
+
+/*
+ * General styles
+ */
+
+ body, html{
+  height: 100%;
+background-repeat: no-repeat;
+background-color: #d3d3d3;
+font-family: 'Oxygen', sans-serif;
+}
+
+.main{
+margin-top: 70px;
+}
+
+h1.title { 
+font-size: 50px;
+font-family: 'Passion One', cursive; 
+font-weight: 400; 
+}
+
+hr{
+width: 10%;
+color: #fff;
+}
+
+.form-group{
+margin-bottom: 15px;
+}
+
+label{
+margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+ font-size: 11px;
+ padding-top: 3px;
+}
+
+.main-login{
+background-color: #fff;
+ /* shadows and rounded borders */
+ -moz-border-radius: 2px;
+ -webkit-border-radius: 2px;
+ border-radius: 2px;
+ -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+ -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+ padding-top: 10px;
+
+
+}
+.main {
+  margin-top: 10px;
+}
+.main-center{
+margin-top: 30px;
+margin: 0 auto; 
+max-width: 330px;
+ padding: 20px 20px;
+ padding-top: 10px;
+ 
+}
+
+.login-button{
+margin-top: 5px;
+}
+
+.login-register{
+font-size: 11px;
+text-align: center;
+}

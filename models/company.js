@@ -2,21 +2,21 @@ const mongoose = require('mongoose');
 
 const companySchema = new mongoose.Schema({
 
-    companyName: {
+    jobName: {
         type: String
     },
-    website: {
+    jobWebsite: {
         type: String
     },
-    location: {
+    jobLocation: {
         type: String
     },
-    image: {
+    jobImage: {
         type: String
     },
 
 });
 
-const Company = mongoose.model("company", companySchema);
+const Company = mongoose.model("Company", companySchema);
 
 module.exports = Company;

@@ -56,7 +56,7 @@ app.use('/public',express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/challenges',challengesRouter);
-app.use('/company',companyRouter);
+app.use('/api/company',companyRouter);
 app.use('/profile',profileRoutes);
 
 

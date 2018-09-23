@@ -8,21 +8,16 @@ router.get('/test', function(req, res, next) {
   res.send('testing a user route');
 });
 
-router.get('/challenges',(req,res)=>{
-  res.render('index');
-})
+
 
 
 //for passport session midddleware
 router.use(passport.initialize());
 
-//show signup page
-router.get('/signup',(req,res)=>{
-  res.render("signup");
-});
+
 
 //// auth routes
-//signup
+// /users/signup
 router.post('/signup',(req,res)=>{
    
   //mongoose method to register a user
@@ -33,20 +28,18 @@ router.post('/signup',(req,res)=>{
      }else{
        passport.authenticate("local")(req,res,function(){
                 //  res.send("u have succesfully signed up");
-                 res.redirect('/users/challenges');
+                 res.redirect('/challenges');
        })
      };
 } )
 })
 
-router.get('/login',(req,res)=>{
-  res.render('login');
-});
+
 
 // login auth route
 
 router.post('/login', passport.authenticate("local",{
-       successRedirect:'/users/challenges',
+       successRedirect:'/challenges',
        failureRedirect : '/login'
 }),(req,res)=>{});
 
