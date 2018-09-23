@@ -15,6 +15,9 @@ var challengesRouter = require('./routes/challenges');
 var profileRouter = require('./routes/profile');
 var companyRouter = require('./routes/company');
 var challengeRouter = require('./routes/challenge');
+var companyRouter = require('./routes/company')
+var profileRoutes = require('./routes/profile');
+
 
 var app = express();
 
@@ -59,6 +62,10 @@ app.use('/profile',profileRouter);
 app.use('/challenge',challengeRouter);
 app.use('/challenges',challengesRouter);
 app.use('/company',companyRouter);
+
+app.use('/api/company',companyRouter);
+app.use('/profile',profileRoutes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,11 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-//test route
-router.get('/home',(req,res)=>{
-    res.render('company');
-});
 
+// /api/company
 //get all Companies
 router.get('/',(req,res)=>{
     db.Company.find()
@@ -21,7 +18,7 @@ router.post('/',(req,res)=>{
     .catch((err)=>res.send(err));
 });
 
-//show page for a particular comapny
+//show page for a particular company
 router.get('/:id',(req,res)=>{
     let id = req.params.id;
     db.Company.findById(id)
