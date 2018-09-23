@@ -18,7 +18,9 @@ mongoose.connect('mongodb://localhost/thshp',(err)=>{
 
 module.exports.User = require('./users');
 module.exports.Profile = require('./profile');
-module.exports.Challenge = require('./challenges');
+module.exports.Challenges = require('./challenges');
 module.exports.Company = require('./company');
+module.exports.Challenge =require('./challenge');
+
 
 mongoose.Promise = Promise;
