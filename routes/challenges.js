@@ -4,20 +4,16 @@ const router = express.Router();
 const db = require('../models');
 
 
-
-
-
-
 //get all challenges
 router.get('/',(req,res)=>{
-    db.Challenge.find()
+    db.Challenges.find()
     .then((challenges)=> res.json(challenges))
     .catch((err)=>res.send(err));
 });
 
 //create a new challenge
 router.post('/',(req,res)=>{
-    db.Challenge.create(req.body)
+    db.Challenges.create(req.body)
     .then((challenges)=> res.json(challenges))
     .catch((err)=>res.send(err));
 });
@@ -25,21 +21,21 @@ router.post('/',(req,res)=>{
 //show page for a particular challenge
 router.get('/:id',(req,res)=>{
     let id = req.params.id;
-    db.Challenge.findById(id)
+    db.Challenges.findById(id)
     .then((challenges)=> res.json(challenges))
     .catch((err)=>res.send(err));
 });
 
 //update a particular challenge
 router.put('/:id',(req,res)=>{
-    db.Challenge.findByIdAndUpdate({_id:req.params.id},req.body)
+    db.Challenges.findByIdAndUpdate({_id:req.params.id},req.body)
     .then((challenges)=> res.json(challenges))
     .catch((err)=>res.send(err));
 });
 
 //delete a particular challenge
 router.delete('/:id',(req,res)=>{
-    db.Challenge.remove({_id:req.params.id})
+    db.Challenges.remove({_id:req.params.id})
     .then(res.send("challenge is removed"))
     .catch((err)=>res.send(err));
 });

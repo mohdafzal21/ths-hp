@@ -13,11 +13,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var challengesRouter = require('./routes/challenges');
 var profileRouter = require('./routes/profile');
-var companyRouter = require('./routes/company');
-var challengeRouter = require('./routes/challenge');
-var companyRouter = require('./routes/company')
-var profileRoutes = require('./routes/profile');
 
+var companyRouter = require('./routes/company')
+
+//
 
 var app = express();
 
@@ -56,15 +55,14 @@ app.use(cookieParser());
 app.use(methodOverride('_method'))
 app.use('/public',express.static(path.join(__dirname, 'public')));
 
+// routes//
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/profile',profileRouter);
-app.use('/challenge',challengeRouter);
-app.use('/challenges',challengesRouter);
-app.use('/company',companyRouter);
 
-app.use('/api/company',companyRouter);
-app.use('/profile',profileRoutes);
+app.use('/api/challenges/',challengesRouter);
+app.use('/api/company/',companyRouter);
+
 
 
 // catch 404 and forward to error handler

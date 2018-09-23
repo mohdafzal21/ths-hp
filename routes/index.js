@@ -3,12 +3,14 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
+});
+//test route challenges route
+router.get('/challenges',(req,res)=>{
+  res.render('challenges');
 });
 
-router.get('/challenge', function(req, res, next) {
-  res.render('challenge', { title: 'Express' });
-});
+
 //show signup page
 router.get('/signup',(req,res)=>{
   res.render("signup");
@@ -19,10 +21,9 @@ router.get('/login',(req,res)=>{
   res.render('login');
 });
 
-//test route challenges route
-router.get('/challenges',(req,res)=>{
-  res.render('challenges');
-});
+router.get('/addChallenges',(req,res)=>{
+  res.render('addChallenges');
+})
 
 //test route - for company
 router.get('/company',(req,res)=>{
