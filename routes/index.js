@@ -5,11 +5,11 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index');
 });
+
 //test route challenges route
 router.get('/challenges',(req,res)=>{
   res.render('challenges');
 });
-
 
 //show signup page
 router.get('/signup',(req,res)=>{
