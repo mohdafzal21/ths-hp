@@ -8,13 +8,43 @@ body {
 a {
   color: rgb(74, 193, 240);
 }
-
-.card {
-margin-top: 30px;
-float: left;
-margin-left: 30px;
-}
 .card-img-top{
   height: 200px;
 }
 
+.btn {
+  margin-left: 10px;
+}
+
+
+.name{
+  font-size: 50px;
+}
+
+.taskBtn {
+
+  margin-left: 900px;
+  margin-top: 20px;
+  margin-right: 60px;
+  font-size: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.dateAndTime{
+  border: solid 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.location{
+  margin-top: 10px;
+}
+.dateAndTime{
+  margin-right: 100px;
+}
+.all{
+  margin-left: 20px;
+  margin-right: 20px;
+}

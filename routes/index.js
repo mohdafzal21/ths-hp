@@ -29,6 +29,8 @@ router.get('/addChallenges',(req,res)=>{
 router.get('/company',(req,res)=>{
   res.render('company');
 });
-
+router.get('/startTask/:id',(req,res)=>{
+  res.render('startTask');  
+});
 
 module.exports = router;

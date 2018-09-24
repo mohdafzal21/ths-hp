@@ -1,7 +1,38 @@
-<form id=addR action="/api/challenges/" method="POST">
-    <input type="text" name="companyName" placeholder="company name">
-    <input type="text" name="position" placeholder="position">
-    <input type="text" name="contestType" placeholder="contestType">
-    <button type="submit">submit</button>
+<% include ./partials/header.ejs %>
+
+<form class="text-center border border-light p-5" id="addR" action='/api/challenges/' method="POST">
+
+    <p class="h4 mb-4">Add Challenge Data</p>
     
-    </form>
+    <div class="form-row mb-4">
+        <div class="col">
+            <input type="text" name="companyName" class="form-control" placeholder="Company Name">
+        </div>
+        <div class="col">
+            <input type="text" name="position" class="form-control" placeholder="Position">
+        </div>
+    </div>
+    <div class="form-row mb-4">
+        <div class="col">
+
+            <input type="text" name="contestType" class="form-control" placeholder="Contest Type">
+        </div>
+        <div class="col">
+
+            <input type="text" name="jobAddress" class="form-control" placeholder="Location">
+        </div>
+    </div>
+
+    <input type="text" name="companyImage" class="form-control mb-4" placeholder="Company Image URL">
+
+
+    <input type="text" name="competitionImage" class="form-control mb-4" placeholder="Competition Image URL">
+
+    <button class="btn btn-info my-4 btn-block" type="submit">Submit</button>
+
+</form>
+
+
+
+
+<% include ./partials/footer.ejs %>
