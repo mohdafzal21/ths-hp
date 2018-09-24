@@ -1,0 +1,94 @@
+<% include ./partials/header.ejs %>
+    <div class="content_container">
+
+        <!-- PANEL ONE -->
+        <div class="item panel_one hidden" data-panel="0">
+            <div class="wrapper">
+                <h1 class="hidden">Quiz</h1>
+                <div class="start_quiz">
+                    Start Quiz
+                </div>
+            </div>
+        </div>
+
+        <!--  PANEL TWO -->
+        <div class="item panel_two hidden" data-panel="1">
+            <div class="wrapper">
+
+                <h3>What is the step in making state predictable?</h3>
+                <div class="options">
+                    <div>Put the state in the state tree</div>
+                    <div>Enforcing immutability</div>
+                    <div>Only using setState</div>
+                </div>
+                <div class="next_question" data-next="2"> Next question </div>
+            </div>
+        </div>
+
+        <!--  PANEL THREE  -->
+        <div class="item panel_three hidden" data-panel="2">
+            <div class="wrapper">
+
+                <h3>Select the benefit of putting all your state in a treee</h3>
+                <div class="options">
+                    <div>Shared Cache</div>
+                    <div>predictable state change</div>
+                    <div>Server Rendering</div>
+                </div>
+                <div class="next_question" data-next="3"> Next question </div>
+            </div>
+        </div>
+
+        <!--  PANEL FOUR  -->
+        <div class="item panel_four hidden" data-panel="3">
+            <div class="wrapper">
+
+                <h3>What do we call the combination of our state tree, a way to get it, update it, and listen to it?</h3>
+                <div class="options">
+                    <div>the safe</div>
+                    <div>the container</div>
+                    <div>the store</div>
+                </div>
+                <div class="next_question" data-next="4"> Next question </div>
+            </div>
+        </div>
+
+        <!--  PANEL FIVE  -->
+        <div class="item panel_five hidden" data-panel="4">
+            <div class="wrapper">
+
+                <h3>Who wins the battle ? </h3>
+                <div class="options">
+                    <div>React js</div>
+                    <div>Angular js</div>
+                    <div>Vue js</div>
+                </div>
+                <div class="next_question" data-next="5"> Next question </div>
+            </div>
+        </div>
+
+
+        <!-- final -->
+        <div class="item panel_six hidden" data-panel="5">
+            <div class="wrapper">
+
+                <h3>Thank you for participating !!</h3>
+                <button class="btn btn-primary"><a href="/challenges">Home</a></button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="error">
+        Please make a selection
+    </div>
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+
+    <script src="/public/javascripts/quiz.js"></script>
+
+    <% include ./partials/footer.ejs %>
