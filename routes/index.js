@@ -34,6 +34,16 @@ router.get('/company',(req,res)=>{
 router.get('/addCompany',(req,res)=>{
   res.render('addCompany');
 });
+// test rout -for taslk
+router.get('/task',(req,res)=>{
+  res.render('task');
+});
+
+// // test rout -for taslk
+// router.get('/upload',(req,res)=>{
+//   res.render('upload');
+// });
+
 
 
 module.exports = router;

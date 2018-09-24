@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uploading a file using multer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>FILE UPLOADS</h1>
+    <%= typeof msg !="undefined" ? msg : ' '%>
+    <form action="/api/task/upload" method="post" enctype="multipart/form-data">
+        <div class="file-field input-field">
+            <div class="btn grey">
+                <span>File</span>
+                <input name='img' type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+        <button type="submit" class="btn" value="uploads">SUBMIT</button>
+    </form>
+</div>
+<!--it is for jquerry from jquerry cdn-->
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<!--it is for javascript from materialize cdn-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+

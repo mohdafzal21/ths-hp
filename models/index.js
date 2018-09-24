@@ -20,7 +20,7 @@ module.exports.User = require('./users');
 module.exports.Profile = require('./profile');
 module.exports.Challenges = require('./challenges');
 module.exports.Company = require('./company');
-
+module.exports.Task = require('./task');
 
 
 mongoose.Promise = Promise;

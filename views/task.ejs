@@ -1,0 +1,52 @@
+<% include ./partials/header.ejs %> 
+
+<form id="addr2"  method="POST">
+  <label>Update Task</label><br>
+    <label>Task</label><input type="text" name="task" id ="id1">
+    <button type="submit" >submit</button>
+     
+  </form>
+
+ <div class="row">
+<div class="col-md-8 content"></div>
+<div class="col-md-4">
+<h1>Countdown Clock</h1>
+<div id="clockdiv">
+<div>
+	<span class="days" id="day"></span>
+	<div class="smalltext">Days</div>
+</div>
+<div>
+	<span class="hours" id="hour"></span>
+	<div class="smalltext">Hours</div>
+</div>
+<div>
+	<span class="minutes" id="minute"></span>
+	<div class="smalltext">Minutes</div>
+</div>
+<div>
+	<span class="seconds" id="second"></span>
+	<div class="smalltext">Seconds</div>
+</div>
+</div></div>
+  <p id="demo"></p>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/codemirror.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/mode/javascript/javascript.min.js"> </script>
+
+
+<script>
+  $('#addr2').hide();
+  
+
+</script>
+
+
+
+<script src="/public/javascripts/task.js"></script>
+
+
+<% include ./partials/footer.ejs %>

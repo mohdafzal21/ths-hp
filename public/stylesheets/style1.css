@@ -21,6 +21,13 @@ addR{
   float: left;
 
 }
+
+#code-screen{
+  margin-top: 30px;
+  height:400px;
+  width: 800px;
+ 
+}
   /* login css */
 
   body#background{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; }
@@ -160,4 +167,36 @@ text-align: center;
   margin-right: 10px;
   margin-top: 10px;
   font-size: 20px;
+}
+
+
+h1{
+
+font-weight: 50;
+font-size: 20px;
+margin: 20px 0px 10px;
+}
+#clockdiv{
+	font-family: sans-serif;
+	
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 15px;
+}
+#clockdiv > div{
+	padding: 5px;
+	border-radius: 2px;
+	background: #dedede;
+	display: inline-block;
+}
+#clockdiv div > span{
+	padding: 7px;
+	border-radius: 1.5px;
+	background: #cecece;
+	display: inline-block;
+}
+smalltext{
+	padding-top: 5px;
+	font-size: 12px;
 }
