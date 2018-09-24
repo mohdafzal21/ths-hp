@@ -35,5 +35,8 @@ router.get('/addCompany',(req,res)=>{
   res.render('addCompany');
 });
 
+router.get('/quiz',(req,res)=>{
+  res.render('quiz');
+});
 
 module.exports = router;
