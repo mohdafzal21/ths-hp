@@ -22,8 +22,11 @@ router.post('/',(req,res)=>{
 //show page for a particular challenge
 router.get('/:id',(req,res)=>{
     let id = req.params.id;
-    db.Challenges.findById(id)
-    .then((challenges)=> res.json(challenges))
+     db.Challenges.findById(id)
+    
+     .then((challenges)=> res.json(challenges))
+    // .then(res.render('startTask'))
+    
     .catch((err)=>res.send(err));
 });
 

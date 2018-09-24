@@ -29,24 +29,8 @@ router.get('/addChallenges',(req,res)=>{
 router.get('/company',(req,res)=>{
   res.render('company');
 });
-
-//test route - for company
-router.get('/addCompany',(req,res)=>{
-  res.render('addCompany');
-});
-// test rout -for taslk
-router.get('/task',(req,res)=>{
-  res.render('task');
-});
-
-// // test rout -for taslk
-// router.get('/upload',(req,res)=>{
-//   res.render('upload');
-// });
-
-
-router.get('/quiz',(req,res)=>{
-  res.render('quiz');
+router.get('/startTask/:id',(req,res)=>{
+  res.render('startTask');  
 });
 
 module.exports = router;
