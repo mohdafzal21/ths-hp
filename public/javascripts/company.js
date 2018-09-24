@@ -82,8 +82,8 @@
       template += '<p  class="card-text">' + id.jobWebsite + "</p>";
       template +=
         '<h5 class="fas fa-map-marker-alt">' + id.jobLocation + "</h5><br>";
-      template += '<button class="del btn btn-primary">Delete</button>';
-      template += '<button class="update btn btn-primary">Edit Detials</button>';
+      // template += '<button class="del btn btn-primary">Delete</button>';
+      // template += '<button class="update btn btn-primary">Edit Detials</button>';
       template += "</div>";
       template += "</div>";
     });
