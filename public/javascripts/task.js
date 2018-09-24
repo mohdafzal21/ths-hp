@@ -24,6 +24,7 @@
     task.addR();
     task.upl();
     task.timer();
+    task.quz();
     task.generateMarkup();
   };
   
@@ -73,7 +74,7 @@
 
   task.quz=function(){
     $(".quz").on("click",function(){
-      window.location ="/quiz/"
+      window.location ="/quiz"
     })
   }
   task.timer = function(){
@@ -128,6 +129,7 @@
     task.upd();
     task.addR();
     task.upl();
+    task.quz();
     // $("#demo").append(deadline);
     // task.timer();
   };
