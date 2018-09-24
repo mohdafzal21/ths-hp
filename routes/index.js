@@ -33,4 +33,12 @@ router.get('/startTask/:id',(req,res)=>{
   res.render('startTask');  
 });
 
+router.get('/task', (req,res)=>{
+  res.render('task');
+});
+
+router.get('/quiz', (req,res)=>{
+  res.render('quiz');
+});
+
 module.exports = router;
