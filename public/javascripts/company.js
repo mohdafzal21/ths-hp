@@ -15,6 +15,7 @@
     });
   };
   
+
   company.init = function() {
     company.del();
     company.upd();
@@ -66,8 +67,8 @@
   company.generateMarkup = function() {
     var template = "";
   
-    // template +=
-    //   '<div href="/addCompany" class="addR btn btn-primary"> <button>Add company</button></div>';
+    template +=
+      '<div href="/addCompany" class="addR btn btn-primary"> <button>Add company</button></div>';
   
     $.each(company.database, function(index) {
       db = company.database;

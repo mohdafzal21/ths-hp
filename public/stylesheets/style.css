@@ -1,115 +1,57 @@
 
-
+.content{
+  margin-top: 5px;
+};
 a {
   color: rgb(74, 193, 240);
-}
-
-.card {
-margin-top: 30px;
-float: left;
-margin-left: 30px;
 }
 .card-img-top{
   height: 200px;
 }
 
-
-body{
-  font-family: Roboto, 'arial';
-  margin:0;
+.btn {
+  margin-left: 10px;
 }
 
-.hidden {
-  display:none;
-}
-.content_container .item {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  position: fixed;
-}
-
-.content_container .item.panel_one {
-  display:block;
-}
-
-.content_container .wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 180px;
-}
-
-.start_quiz {
-  border: 1px solid #cccccc;
-  padding: 10px 20px;
-  border-radius: 40px;
-  color: #9a9a9a;
-  cursor:pointer;
-}
-.start_quiz.started {
-  background: #3f51b5;
-  color: #fff;
-}
-
-
-/* PANELS */
-
-.panel_two .wrapper,
-.panel_three .wrapper,
-.panel_four .wrapper,
-.panel_five  .wrapper {
-  display:none;
-}
-
-/* SELECTABLE ELEMENTS */
-
-.options {
-  height:200px;
-}
-.options div {
-  display: none;
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: #3f51b5;
-  transition: all 0.2s ease;
-}
-
-.options div.active {
-  color: #007fff;
-  background: #313131;
-}
-
-.next_question {
-  cursor: pointer;
-}
-
-/* PROGRESS AND ERROR */
-
-.error {
-  position: fixed;
-  bottom: 13px;
-  width: 100%;
-  color: #F44336;
-  font-weight: bold;
-  text-align: center;
-  display: none;
-}
-
-.progress {
-  position: fixed;
-  bottom:0;
-  background: #d0d0d0;
-  width:100%;
-}
-
-.bar {
-  width:0%;
-  height:5px;
-  background: #00BCD4;
+li{
+  text-decoration: none;
 }
 
 
 
+
+.name{
+  font-size: 50px;
+}
+
+.taskBtn {
+
+  margin-left: 900px;
+  margin-top: 20px;
+  margin-right: 60px;
+  font-size: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.dateAndTime{
+  border: solid 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.location{
+  margin-top: 10px;
+}
+.dateAndTime{
+  margin-right: 100px;
+}
+.all{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* .container .text-muted {
+  margin: 20px 0;
+} */

@@ -22,8 +22,9 @@ router.post('/signup',(req,res)=>{
        res.render('signup');
      }else{
        passport.authenticate("local")(req,res,function(){
-                //  res.send("u have succesfully signed up");
-                 res.redirect('/home');
+                                
+                req.flash("u have successfully signed up" + req.username);
+                 res.redirect('/challenges');
        })
      };
 } )
@@ -32,8 +33,11 @@ router.post('/signup',(req,res)=>{
 // login auth route
 
 router.post('/login', passport.authenticate("local",{
-       successRedirect:'/home',
-       failureRedirect : '/login'
+       successRedirect:'/challenges',
+       failureRedirect : '/login',
+       failureFlash : true,
+       successFlash : "welcome back to ths!"
+       
 }),(req,res)=>{});
 
 
@@ -42,7 +46,9 @@ router.post('/login', passport.authenticate("local",{
 //logout 
 router.get('/logout',(req,res)=>{
     req.logout();
+    req.flash('u have to login to continue');
     res.redirect('/login');
+    
 });
 
 

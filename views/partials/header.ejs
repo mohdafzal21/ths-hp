@@ -3,12 +3,15 @@
     <title>THS</title>
 <script  src="/public/vendor/jquery-3_3_1_min_js.js" ></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">   
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="/public/javascripts/dom.js"></script>
+
+<link  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">   
 <link rel="stylesheet" href="/public/vendor/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="/public/stylesheets/style.css" type="text/css" >
 <link rel="stylesheet" href="/public/stylesheets/style1.css" type="text/css" >
+<link rel="stylesheet" href="/public/stylesheets/main.css" type="text/css">
 
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
@@ -35,12 +38,30 @@
         <li class="nav-item">
             <a class="nav-link" href="/company2/">COMPANIES</a>
           </li>
+<<<<<<< HEAD
           </ul>         
            
       <button class= "btn btn-primary"><a href="/company">For Businesses</a></button> 
      <button class="btn btn-primary"><a href="/signup">Signup</a></button>
       <button class="btn btn-primary"><a href="/login">Login</a></button>
       <button class ="btn btn-primary"><a href ="/users/logout/">logout</a></button>
+=======
+           </ul>
+     <!-- <button class="btn btn-primary"><a href="/signup">Signup</a></button>
+      <button class="btn btn-primary"><a href="/login">Login</a></button>
+      <button class ="btn btn-primary"><a href ="/users/logout/">logout</a></button> --> 
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if(!currentUser){ %>
+            <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
+            <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/signup">Sign Up</a></li>
+        <% } else { %>
+            <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+            <li><a href="/users/logout">Logout</a></li>
+        <% } %>
+    </ul>
+
+>>>>>>> 29cd170f0d27c4eaccd521feb06036c52e33bdaf
       </form>
     </div>
       </nav>
@@ -49,4 +70,13 @@
   <body id="background">
     
 
-
+    <div class="container">
+      <% if(error && error.length > 0) { %>
+        <div class="alert alert-danger"><p><%=error %></p></div>
+      <% } %>
+      
+      <% if(success && success.length > 0) { %>
+        <div class="alert alert-success"><p><%= success %></p></div>
+      <% } %>
+   </div>
+  

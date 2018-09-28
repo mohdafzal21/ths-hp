@@ -3,6 +3,10 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
+const middleware = require('../middleware');
+
+const {loggedIn} = middleware;   //destructuring assignment
+
 
   
 //get all challenges
@@ -13,7 +17,7 @@ router.get('/',(req,res)=>{
 });
 
 //create a new challenge
-router.post('/',(req,res)=>{
+router.post('/',loggedIn,(req,res)=>{
     db.Challenges.create(req.body)
     .then(res.redirect('/challenges'))
     .catch((err)=>res.send(err));
@@ -22,8 +26,11 @@ router.post('/',(req,res)=>{
 //show page for a particular challenge
 router.get('/:id',(req,res)=>{
     let id = req.params.id;
-    db.Challenges.findById(id)
-    .then((challenges)=> res.json(challenges))
+     db.Challenges.findById(id)
+    
+     .then((challenges)=> res.json(challenges))
+    // .then(res.render('startTask'))
+    
     .catch((err)=>res.send(err));
 });
 

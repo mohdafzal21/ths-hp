@@ -115,8 +115,8 @@
      
       template += '<textarea id="code-screen">' + id.task + "</textarea>";
       template += '<button class="update btn btn-primary">Add Task</button>';
-      template += '<button class="del btn btn-primary">Delete</button>';
-      template += '<button class="update btn btn-primary">Edit Detials</button>';
+      // template += '<button class="del btn btn-primary">Delete</button>';
+      // template += '<button class="update btn btn-primary">Edit Detials</button>';
       template += '<button class="upl btn btn-primary">Upload Your File</button>';
       template += '<button class="quz btn btn-primary">Quiz</button>';
       
