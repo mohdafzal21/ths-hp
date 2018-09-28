@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var middleware = require('../middleware');
+var {loggedIn} = middleware;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -23,6 +25,10 @@ router.get('/login',(req,res)=>{
 
 router.get('/addChallenges',(req,res)=>{
   res.render('addChallenges');
+})
+
+router.get('/addCompany',(req,res)=>{
+  res.render('addCompany');
 })
 
 //test route - for company
