@@ -46,38 +46,6 @@ router.post('/test',(req,res)=>{
     console.log(req.body);
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // router.post('/profile', upload.single('avatar'), (req, res) => {
 //     if (!req.file) {
 //       console.log("No file received");

@@ -30,6 +30,11 @@ router.get('/company',(req,res)=>{
   res.render('company');
 });
 
+//test rout for company 2 
+router.get('/company2',(req,res)=>{
+  res.render('company2');
+});
+
 //test route - for company
 router.get('/addCompany',(req,res)=>{
   res.render('addCompany');

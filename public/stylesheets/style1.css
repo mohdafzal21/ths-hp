@@ -10,6 +10,11 @@ a {
   .navbar-light{
       background-color: aliceblue;
   }
+  .dropdown{
+    margin-right: 15px;
+    margin-top: 10px;
+    float: right;
+  }
 
   .btn-primary {
     color: #fff;
@@ -17,9 +22,13 @@ a {
     border-color: #007bff;
     margin-left: 10px;
 }
+.button{
+  float: right;
+  margin: 15px;
+
+}
 addR{
   float: left;
-
 }
 
 #code-screen{

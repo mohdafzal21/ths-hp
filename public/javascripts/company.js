@@ -80,12 +80,18 @@
       template += '<div class="card-body">';
       template += '<h3 class="card-title">' + id.jobName + "</h3>";
       template += '<p  class="card-text">' + id.jobWebsite + "</p>";
-      template +=
-        '<h5 class="fas fa-map-marker-alt">' + id.jobLocation + "</h5><br>";
+      template +='<h5 class="fas fa-map-marker-alt">' + id.jobLocation + "</h5><br>";
+      template +='<div id="hide">'
       template += '<button class="del btn btn-primary">Delete</button>';
       template += '<button class="update btn btn-primary">Edit Detials</button>';
       template += "</div>";
+
       template += "</div>";
+
+      template += "</div>";
+
+      // template+= '<div class ="button btn btn-primary"><a href ="/addCompany">Add Company</a></button>'
+      // template+= "</div>"
     });
     $(".content").append(template);
     company.del();
@@ -93,8 +99,6 @@
     company.addR();
   };
   // on click
-  
-  
   
   loadAssets();
   
