@@ -10,6 +10,22 @@ var methodOverride = require('method-override');
 var passport              = require("passport")
 var LocalStrategy         = require("passport-local")
 var passportLocalMongoose = require("passport-local-mongoose")
+
+
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
+var transporter = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  auth: {
+    user: 's',
+    pass: 'realpasswordforaboveaccount'
+  }
+}));
+
+
+
 //controllers
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,6 +39,26 @@ var session = require("express-session"),
 
  app = express();
 //require moment
+
+app.post('/contact',(req,res)=>{
+  
+  var mailOptions = {
+    from: 'somerealemail@gmail.com',
+    to: 'friendsgmailacc@gmail.com', 
+    subject: 'Sending Email using Node.js[nodemailer]',
+    text: 'That was easy!' 
+  };
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });  
+  
+})
+
+
 
 //passport configure
 app.use(bodyParser.urlencoded({extended: true}));

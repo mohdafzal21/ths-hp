@@ -32,23 +32,14 @@ router.get('/addCompany',(req,res)=>{
 })
 
 //test route - for company
-router.get('/company',(req,res)=>{
-  res.render('company');
-});
-<<<<<<< HEAD
 
-//test rout for company 2 
-router.get('/company2',(req,res)=>{
-  res.render('company2');
-});
 
-//test route - for company
-router.get('/addCompany',(req,res)=>{
-  res.render('addCompany');
-=======
 router.get('/startTask/:id',(req,res)=>{
   res.render('startTask');  
->>>>>>> 29cd170f0d27c4eaccd521feb06036c52e33bdaf
+});
+
+router.get('/company2',(req,res)=>{
+  res.render('company2');
 });
 
 router.get('/task', (req,res)=>{

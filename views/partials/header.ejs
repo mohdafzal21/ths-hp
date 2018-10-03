@@ -38,14 +38,6 @@
         <li class="nav-item">
             <a class="nav-link" href="/company2/">COMPANIES</a>
           </li>
-<<<<<<< HEAD
-          </ul>         
-           
-      <button class= "btn btn-primary"><a href="/company">For Businesses</a></button> 
-     <button class="btn btn-primary"><a href="/signup">Signup</a></button>
-      <button class="btn btn-primary"><a href="/login">Login</a></button>
-      <button class ="btn btn-primary"><a href ="/users/logout/">logout</a></button>
-=======
            </ul>
      <!-- <button class="btn btn-primary"><a href="/signup">Signup</a></button>
       <button class="btn btn-primary"><a href="/login">Login</a></button>
@@ -53,7 +45,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if(!currentUser){ %>
-            <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
+            <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><button class="btn btn-primary"><a href="/login">Login</a></button></li>
             <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/signup">Sign Up</a></li>
         <% } else { %>
             <li><a href="#">Signed In As <%= currentUser.username %></a></li>
@@ -61,7 +53,6 @@
         <% } %>
     </ul>
 
->>>>>>> 29cd170f0d27c4eaccd521feb06036c52e33bdaf
       </form>
     </div>
       </nav>
