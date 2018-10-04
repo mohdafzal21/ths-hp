@@ -1,3 +1,4 @@
+console.log(challenges);
 (function start() {
     this.runFuntion = function() {
       alert("hey");
@@ -9,12 +10,15 @@
   };
   challenges.database = {};
   const loadAssets = function() {
-    
-    $.getJSON('/api/challenges/5ba760027b27d07fa0bd2198', function(data) {
-        console.log(data);
+   
+    $.getJSON('/api/challenges/', function(data) {
+       
       challenges.database = data;
       challenges.init();
     });
+        // showpage(number) ;
+        // console.log(number);
+
   };
   
   challenges.init = function() {

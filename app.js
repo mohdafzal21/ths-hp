@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var nodemailer = require("nodemailer");
 var flash = require('connect-flash');
 var multer = require('multer');
 var methodOverride = require('method-override');
@@ -17,8 +18,9 @@ var challengesRouter = require('./routes/challenges');
 var profileRouter = require('./routes/profile');
 var taskRouter = require('./routes/task')
 var companyRouter = require('./routes/company')
-var session = require("express-session"),
-
+var session = require("express-session");
+var config = require('./middleware/config.js');
+var transporter = nodemailer.createTransport(config.mailer);
 //
 
  app = express();
@@ -88,6 +90,51 @@ app.use('/api/task/',taskRouter);
 
 
 
+//nodemailer code 
+// var smtpTransport = nodemailer.createTransport({
+//   service: "Gmail",
+//   host: "smtp.gmail.com",
+//     port: 465,
+//   auth: {
+//       user: "mohammedafzal94@gmail.com",
+//       pass: "ACerv5g3PlOkIjUhYgTfRdEsWa"
+//   }
+// });
+
+// app.post('/send',function(req,res){
+//   var mailOptions={
+//       from: 'Mohammed Afzal <no-reply@mohammedafzal94@gmail.com>',
+//       to : "mohammedafzal94@gmail.com",
+//       subject : "req.query.subject",
+//       text : "req.query.text"
+//   }
+//   console.log(mailOptions);
+//   smtpTransport.sendMail(mailOptions, function(error, response){
+//    if(error){
+//           console.log(error);
+//       res.end("error");
+//    }else{
+//           console.log("Message sent: " + response.message);
+//       res.end("sent");
+//        }
+// });
+// });
+
+
+app.post('/contact',(req,res)=>{
+  var mailOptions = {
+    from: 'mohammedafzal94@gmail.com',
+    to: 'mohammedafzal94@gmail.com',
+    subject: 'You got a new message from visitor 💋 😽',
+    text: req.body.message
+  };
+transporter.sendMail(mailOptions, function (error, info) {
+  if (error) {
+    return console.log(error);
+  }
+  res.send('thank', { title: 'ths - a platform for sharing code.'});
+});
+})
 
 
 // catch 404 and forward to error handler
