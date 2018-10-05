@@ -3,8 +3,27 @@
 <div class="content"></div>
 
 
+<!-- <%=challenges %> -->
 
 
-<script src="/public/javascripts/startTask.js"></script>
+
+<div class="card mb-3">
+    <img class="card-img-top" src=<%=challenges. companyImage%> alt="Card image cap"></div> 
+    <div class="all">   
+    <a href="/task" class="taskBtn btn btn-primary">Start</a>
+    <h5 class="name"> <%= challenges.name %></h5>
+    <h5 class="card-text"><%=challenges.position %> <b> <%=challenges.contestType %></b></h5>
+    <div class="dateAndTime">
+    <h5 class = "startTime">Start Time <%=challenges.startTime %> </h5>
+    <h5 class ="endTime">End Time<%=challenges.endTime %> </h5>
+    <h5 class ="startDate">Start Date <%=challenges.StartDate %> </h5>
+   <h5 class ="endDate">End Date <%=challenges.endDate %> </h5></div>
+   <h5 class="fas fa-map-marker-alt"><%=challenges.jobAddress %> </h5>
+   </div>
+ </div>
+
+
+<!-- <script src="/public/javascripts/startTask.js"></script> -->
+<!-- <script src="/public/javascripts/challenges.js"></script> -->
 
 <% include ./partials/footer.ejs %>

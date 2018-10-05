@@ -77,7 +77,10 @@ addR{
 }
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}
-
+.col-md-4{
+  float: right;
+  padding-right: 10%,10%,10%,10%;
+}
 /* signup css  */
 
 

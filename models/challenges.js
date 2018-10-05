@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 const challengesSchema = new mongoose.Schema({
    
         companyName: {
-            type: String,
-            required: true
+            type: String
+            
         },
         position: {
-            type: String,
-            required: true
+            type: String
+            
         },
         contestType: {
-            type: String,
-            required: true
+            type: String
+            
         },
         startTime: {
             type: String,

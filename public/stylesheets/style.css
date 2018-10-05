@@ -17,7 +17,9 @@ li{
   text-decoration: none;
 }
 
-
+#timer{
+  float: left;
+}
 
 
 .name{

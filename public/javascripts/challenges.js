@@ -39,8 +39,8 @@ challenges.start = function() {
   $(".datadiv").on("click", function() {
     
        let number = $(this).data("id");
-      //  console.log(number);
-       window.location = '/startTask/' + number;
+      challenges.showpage(number);
+      
   });
 };
 
@@ -94,6 +94,7 @@ challenges.generateMarkup = function() {
   $.each(challenges.database, function(index) {
     db = challenges.database;
     id = db[index];
+    console.log(id);
     
     template +=  '<div class="dataDiv" data-id ="'+id._id+'">'
     template += '<div class="card" style="width: 18rem;">';
@@ -117,6 +118,16 @@ challenges.generateMarkup = function() {
   challenges.start();
 };
 // on click
+
+
+
+
+
+
+
+ challenges.showpage = function(number){
+    window.location = '/api/challenges/' + number;
+  }
 
 
 
