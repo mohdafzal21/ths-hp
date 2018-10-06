@@ -1,8 +1,6 @@
 
 
-a {
-  background-color: aqua;
-}
+
  .navbar-expand-lg{
       background-color: black;
   }
@@ -12,8 +10,6 @@ a {
 
   .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
     margin-left: 10px;
 }
 addR{
@@ -78,10 +74,7 @@ addR{
  */
 
  body, html{
-  height: 100%;
 background-repeat: no-repeat;
-font-family: 'Roboto', sans-serif;
-background-color: #d3d3d3;
 
 }
 

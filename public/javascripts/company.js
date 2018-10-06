@@ -67,24 +67,22 @@
   company.generateMarkup = function() {
     var template = "";
   
-    template +=
-      '<div href="/addCompany" class="addR btn btn-primary"> <button>Add company</button></div>';
+    template += '<div href="/addChallenges" class="addR btn btn-outline-dark">Add company</button></div>';
   
     $.each(company.database, function(index) {
       db = company.database;
       id = db[index];
     //   console.log(id);
   
-      template += '<div class="card" style="width: 18rem;">';
-      template +=
-        '<img class="card-img-top" src="' + id.jobImage + '"></img>';
+      template += '<div class="cards" style="width: 18rem;">';
+      template += '<img class="card-img-top" src="' + id.jobImage + '"></img>';
       template += '<div class="card-body">';
       template += '<h3 class="card-title">' + id.jobName + "</h3>";
       template += '<p  class="card-text">' + id.jobWebsite + "</p>";
-      template +=
-        '<h5 class="fas fa-map-marker-alt">' + id.jobLocation + "</h5><br>";
-      template += '<button class="del btn btn-primary">Delete</button>';
-      template += '<button class="update btn btn-primary">Edit Detials</button>';
+      template += '<h5 class="fas fa-map-marker-alt">' + id.jobLocation + "</h5><br>";
+      template += '<button class="update btn btn-outline-info">Edit Detials</button>';
+      template += '<button class="del btn btn-outline-danger"">Delete</button>';
+
       template += "</div>";
       template += "</div>";
     });
