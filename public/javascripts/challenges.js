@@ -89,7 +89,7 @@ challenges.upd = function() {
 challenges.generateMarkup = function() {
   var template = "";
 
-  template += '<div href="/addChallenges" class="addR btn btn-primary">Add challenges</div>';
+  template += '<div href="/addChallenges" class="addR btn btn-outline-dark">Add challenges</div>';
 
   $.each(challenges.database, function(index) {
     db = challenges.database;
@@ -97,16 +97,16 @@ challenges.generateMarkup = function() {
     console.log(id);
     
     template +=  '<div class="dataDiv" data-id ="'+id._id+'">'
-    template += '<div class="card" style="width: 18rem;">';
+    template += '<div class="cards">';
     
     template +='<img class="card-img-top" src="' + id.companyImage + '"></img>';
     template += '<div class="card-body">';
     template += '<h3 class="card-title">' + id.companyName + "</h3>";
     template += '<p  class="card-text">' + id.position +"  <b>" + id.contestType+'</b></p>';
     template += '<h5  class="fas fa-map-marker-alt">' + id.jobAddress + "</h5><br>";
-    template += '<button class="start btn  btn-outline-primary">Start</button>';
-    template += '<button class="del btn btn-primary">delete</button>';
-    template += '<button class="update btn btn-primary">update</button>';
+    template += '<button class="start btn btn-outline-success">Start</button>';
+    template += '<button class="btn btn-outline-info">Update</button>';
+    template += '<button class="delbtn btn btn-outline-danger">Delete</button>';
     template += "</div>";
     template += "</div>";
     template += "</div>";
