@@ -82,7 +82,6 @@
   var deadline = new Date("sep 27, 2018 15:37:25").getTime();
 
   var x = setInterval(function() {
-  
   var now = new Date().getTime();
   var t = deadline - now;
   var days = Math.floor(t / (1000 * 60 * 60 * 24));
