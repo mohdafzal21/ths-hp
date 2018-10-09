@@ -3,6 +3,7 @@
 <div class="content"></div>
 
 
+
 <!-- <%=challenges %> -->
 
 
@@ -20,10 +21,71 @@
    <h5 class ="endDate">End Date <%=challenges.endDate %> </h5></div>
    <h5 class="fas fa-map-marker-alt"><%=challenges.jobAddress %> </h5>
    </div>
+
+   <div class="row">
+    <div class="col-md-8 content"></div>
+    <div id="timer">
+    <div class="col-md-4">
+    <h1>Countdown Clock</h1>
+    <div id="clockdiv">
+    <div>
+      <span class="days" id="day"></span>
+      <div class="smalltext">Days</div>
+    </div>
+    <div>
+      <span class="hours" id="hour"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div>
+      <span class="minutes" id="minute"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+      <span class="seconds" id="second"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+    </div>
+      <p id="demo"></p>
+    </div>
+    </div>
+    </div>
+  
+
+   <script>
+    task.timer = function(){
+  
+      var deadline = new Date("oct 6, 2018 12:37:25").getTime();
+    
+      var x = setInterval(function() {
+      
+      var now = new Date().getTime();
+      var t = deadline - now;
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+      var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((t % (1000 * 60)) / 1000);
+      document.getElementById("day").innerHTML =days ;
+      document.getElementById("hour").innerHTML =hours;
+      document.getElementById("minute").innerHTML = minutes; 
+      document.getElementById("second").innerHTML =seconds; 
+      if (t < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "TIME UP";
+          document.getElementById("day").innerHTML ='0';
+          document.getElementById("hour").innerHTML ='0';
+          document.getElementById("minute").innerHTML ='0' ; 
+          document.getElementById("second").innerHTML = '0'; }
+      }, 1000);
+      
+    }
+  </script>
+
  </div>
 
 
 <!-- <script src="/public/javascripts/startTask.js"></script> -->
 <!-- <script src="/public/javascripts/challenges.js"></script> -->
+
+
 
 <% include ./partials/footer.ejs %>
