@@ -8,6 +8,12 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+//test route - for company
+router.get('/company',(req,res)=>{
+  res.render('company');
+
+});
+
 //test route challenges route
 router.get('/challenges',(req,res)=>{
   res.render('challenges');
@@ -30,9 +36,6 @@ router.get('/addChallenges',(req,res)=>{
 router.get('/addCompany',(req,res)=>{
   res.render('addCompany');
 })
-
-//test route - for company
-
 
 router.get('/startTask/:id',(req,res)=>{
   res.render('startTask');  

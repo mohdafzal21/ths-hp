@@ -1,4 +1,49 @@
 <% include ./partials/header.ejs %>
-  
+<div class="container">
+    <h1 class="form-heading"></h1>
+    <div class="login-form">
+    <div class="main-div">
+        <div class="panel">
+       <h2>Signup</h2>
+       <p>Please enter your Details</p>
+       </div>
+        <form id="Signup" method="POST" action="/users/signup">
+    
+            <div class="form-group">
+    
 
-    <% include ./partials/footer.ejs %>
+                <input name ="name" class="form-control" id="inputEmail" placeholder="Enter Your Name">
+    
+            </div><div class="form-group">
+    
+
+                <input name ="Lastname" class="form-control" id="inputEmail" placeholder="Last Name">
+    
+            </div>
+            <div class="form-group">
+    
+
+                <input name ="username" class="form-control" id="inputEmail" placeholder="Enter Username">
+    
+            </div>
+            <div class="form-group">
+    
+
+                <input name ="Email Address" class="form-control" id="inputEmail" placeholder="abcd@gmail.com">
+    
+            </div>
+    
+            <div class="form-group">
+    
+                <input type="password" name = "password" class="form-control" id="inputPassword" placeholder="Password">
+    
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+
+        </form>
+    </div>
+    </div>
+    </div>
+
+
+<% include ./partials/footer.ejs %>
