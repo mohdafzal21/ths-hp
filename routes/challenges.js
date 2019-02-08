@@ -9,7 +9,7 @@ const {loggedIn} = middleware;   //destructuring assignment
 
 
   
-//get all challenges
+//get all challenges  localhost:3000/api/challenges
 router.get('/',(req,res)=>{
     db.Challenges.find()
     .then((challenges)=> res.json(challenges))
@@ -27,6 +27,7 @@ router.post('/',(req,res)=>{
 //show page for a particular challenge
 router.get('/:id',(req,res)=>{
     let id = req.params.id;
+   
      db.Challenges.findById(id)
     
      .then((challenges)=> {
